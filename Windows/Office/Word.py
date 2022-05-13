@@ -17,3 +17,17 @@ for table in doc.tables:
 # Write in Doc
 doc.add_paragraph("Hello World")
 doc.save("test.docx")
+
+#---------------------------------------------------
+
+## Credit to Haider Imtiaz
+
+#Convert DOCX to TXT
+# First install this  "pip install docx2txt
+import docx2txt
+ 
+Text = docx2txt.process("filename.docx")
+ 
+print(Text)
+
+#---------------------------------------------------
