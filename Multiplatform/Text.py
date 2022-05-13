@@ -14,3 +14,5 @@ if webapp.button('Correct Sentence'):
     else: 
         correction = app.parse(Text)
         webapp.markdown('Corrected Text => ' + str(correction["result"]))
+
+#---------------------------------------------------

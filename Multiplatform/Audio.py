@@ -32,3 +32,29 @@ sound_volumn.export("music_volumn.mp3", format="mp3")
 sound = AudioSegment.from_file("music.mp3", format="mp3")
 sound_silence = sound + AudioSegment.silent(duration=1000)
 sound_silence.export("music_silence.mp3", format="mp3")
+
+#---------------------------------------------------
+
+## Credit to Haider Imtiaz
+#Play MP3s
+# install this "pip install Pygame"
+from pygame import mixer
+mixer.init()
+mixer.music.load('filename.mp3')
+mixer.music.play()
+ 
+print("Playing Mp3...")
+
+#---------------------------------------------------
+
+## Credit to Haider Imtiaz
+#Text to Realistic Speech
+import os
+from gtts import gTTS
+text_speech = open("textfile.txt", "r").read().replace("\n", " ")
+TTS = gTTS(text=str(text_speech), lang='en-uk')
+ 
+TTS.save("robot.mp3")
+os.system("robot.mp3")
+
+#---------------------------------------------------
